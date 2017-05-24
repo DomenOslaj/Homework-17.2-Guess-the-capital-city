@@ -29,7 +29,22 @@ class BaseHandler(webapp2.RequestHandler):
 
 class MainHandler(BaseHandler):
     def get(self):
-        return self.render_template("hello.html")
+        return self.render_template("main.html")
+
+class Data(object):
+    def __init__(self, country, capital, image):
+        self.country = country
+        self.capital = capital
+        self.image = image
+
+lj = Data(country="Slovenia", capital="Ljubljana", image="/assets/img/capital_1.png")
+vi = Data(country="Austria", capital="Vienna", image="/assets/img/capital_2.png")
+be = Data(country="Germany", capital="Berlin", image="/assets/img/capital_3.png")
+bu = Data(country="Hungary", capital="Budapest", image="/assets/img/capital_4.jpg")
+he = Data(country="Finland", capital="Helsinki", image="/assets/img/capital_5.png")
+br = Data(country="Belgium", capital="Brussels", image="/assets/img/capital_6.png")
+
+
 
 app = webapp2.WSGIApplication([
     webapp2.Route('/', MainHandler),

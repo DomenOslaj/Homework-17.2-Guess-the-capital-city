@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Guess the capital city!{% endblock title %}
+
+{% block content %}
+
+    <form method="post" action="/result">
+
+        Capital city: <input type="text" name="guess">
+
+        <button type="submit">Submit</button>
+
+    </form>
+
+
+{% endblock content %}
