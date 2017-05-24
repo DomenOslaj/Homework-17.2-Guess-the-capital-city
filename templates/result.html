@@ -2,4 +2,20 @@
 
 {% block title %}Guess the capital city{% endblock title %}
 
-{% block content %}{% endblock content %}
+{% block content %}
+
+{% if result %}
+    <p>Correct! Capital city of {{ item.country }} is {{ item.capital }}.</p>
+
+{% else %}
+    <p>Sorry, your answer is not correct. Capital city of {{ item.country }} is {{ item.capital }}.</p>
+
+{% endif %}
+
+<form action="/">
+
+    <button type="submit">Guess again</button>
+
+</form>
+
+{% endblock content %}

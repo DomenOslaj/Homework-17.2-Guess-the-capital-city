@@ -4,13 +4,21 @@
 
 {% block content %}
 
-    <form method="post" action="/result">
+<form method="post" action="/result">
+
+    <p>
+
+        <img src="{{ capital.image }}" width="300px"><br><br>
 
         Capital city: <input type="text" name="guess">
 
+        <input type="hidden" value="{{ capital.country }}" name="country">
+
+
         <button type="submit">Submit</button>
 
-    </form>
+    </p>
 
+</form>
 
 {% endblock content %}
