@@ -42,12 +42,12 @@ def details():
     he = Data( country="Finland", capital="Helsinki", image="/assets/img/capital_5.png" )
     br = Data( country="Belgium", capital="Brussels", image="/assets/img/capital_6.png" )
 
-    return [lj, vi, be, bu, he, br]
+    return [lj, vi, be, bu, he, br]            #list with all data from def details
 
 
 class MainHandler(BaseHandler):
     def get(self):
-        capital = details()[random.randint( 0, 5 )]
+        capital = details()[random.randint( 0, 5 )]           #lj is 0, vi is 1, be is 2...
 
         params = { "capital": capital }
 
